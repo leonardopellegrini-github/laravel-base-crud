@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use ComicsTableSeeder;
 use Illuminate\Http\Request;
+use App\Comic;
 
 class ComicController extends Controller
 {
@@ -13,7 +15,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $Comics = Comic::all();
+        return view('home', compact('Comics'));
     }
 
     /**
@@ -45,7 +48,7 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
