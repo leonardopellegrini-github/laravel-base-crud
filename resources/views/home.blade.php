@@ -5,19 +5,26 @@
 
 <div class="container text-center">
 
-  @foreach ($Comics as $Comic)
-      
+  <h1>Benvenuto in DC Comics</h1>
+
   
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{ $Comic->image }}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{ $Comic->title }}</h5>
-      <p class="card-text">{{ $Comic->type }}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="card-group">
+    @foreach ($Comics as $Comic)
+    <div class="col-2">
+      <img class="card-img-top" src="{{ $Comic->image }}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ $Comic->title }}</h5>
+        <p class="card-text btn-block">{{ $Comic->type }}</p>
+        <a href="{{ route('Comics.show', $Comic) }}" class="btn btn-primary btn-block m-3">Show</a>
+        <a href="#" class="btn btn-success btn-block m-3">Edit</a>
+        <a href="#" class="btn btn-danger btn-block m-3">Delete</a>
+      </div>
     </div>
+
+    @endforeach
+
   </div>
 
-  @endforeach
 
 </div>
 
