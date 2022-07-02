@@ -16,7 +16,7 @@
         <h5 class="card-title">{{ $Comic->title }}</h5>
         <p class="card-text btn-block">{{ $Comic->type }}</p>
         <a href="{{ route('Comics.show', $Comic) }}" class="btn btn-primary btn-block m-3">Show</a>
-        <a href="#" class="btn btn-success btn-block m-3">Edit</a>
+        <a href="{{ route('Comics.edit', $Comic) }}" class="btn btn-success btn-block m-3">Edit</a>
         <a href="#" class="btn btn-danger btn-block m-3">Delete</a>
       </div>
     </div>
