@@ -18,6 +18,6 @@ Route::get('/', 'PageController@index')->name('home');
 
 Route::get('/show/{id}','ComicController@fumetto')->name('show');
 
-Route::get('/edit/{id}','ComicController@fumetto')->name('edit');
+Route::get('/edit/{id}','ComicController@edit')->name('edit');
 
 Route::resource('Comics', 'ComicController');

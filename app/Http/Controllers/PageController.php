@@ -26,7 +26,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('Comics.create')
     }
 
     /**
@@ -59,7 +59,8 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Comics = Comic::find($id);
+        return view('edit', compact('Comic'));
     }
 
     /**
